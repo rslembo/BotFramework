@@ -25,7 +25,7 @@ namespace BotFramework.Dialogs
 
             await context.PostAsync("Aguarde, estou analisando...");
 
-            var endpoint = "http://localhost:51665/api/analysis";
+            var endpoint = "http://creditanalysisapi.azurewebsites.net/api/analysis";
 
             using (var client = new HttpClient())
             {
