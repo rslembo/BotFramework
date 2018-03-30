@@ -56,6 +56,12 @@ namespace BotFramework.Dialogs
                 "Para isso, precisaremos de alguns de seus dados, tudo bem?");
         }
 
+        [LuisIntent("Farewell")]
+        private async Task Farewell(IDialogContext context, LuisResult result)
+        {
+            await context.PostAsync("Muito obrigado por utilizar o nosso Bot! Até a próxima!");
+        }
+
         [LuisIntent("Confirmation")]
         private async Task Confirmation(IDialogContext context, LuisResult result)
         {
