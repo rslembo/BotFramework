@@ -21,7 +21,10 @@ namespace BotFramework.Dialogs
             var message = result.Query;
 
             if (!message.IsCpf())
+            {
                 await context.PostAsync($"Desculpe, não pude compreender a sua frase: '{result.Query}'");
+                return;
+            }
 
             await context.PostAsync("Aguarde, estou analisando...");
 
